@@ -42,13 +42,13 @@ const calcularTotal = (precio, cantidad, comisiones) => {
         let calculoFinal = saldoAImprimir - total;
         console.log(calculoFinal)
          if (typeof localStorage.getItem('saldo')!=='undefined'){
-             localStorage.setItem('saldo', (localStorage.getItem('saldo') - calcularCometa))
+             localStorage.setItem('saldo', (localStorage.getItem('saldo') - total))
           }else{
               localStorage.setItem('saldo', (calculoFinal))
             }
 
          if (typeof localStorage.getItem('inversiones')!=='undefined'){
-             localStorage.setItem('inversiones', (total))
+             localStorage.setItem('inversiones', total)
           }else{
               localStorage.setItem('inversiones', (total))
             }

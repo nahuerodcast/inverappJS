@@ -3,7 +3,7 @@ const formatter = new Intl.NumberFormat('es-AR',{style: 'currency', currency: 'A
 
 // Definimos saldo líquido inicial y manipulamos DOM
 const initialValue = 100000;
-if (localStorage.getItem('saldo')===100000 || NaN) {
+if (localStorage.getItem('saldo')===null) {
     localStorage.setItem('saldo', initialValue)
 }
 
@@ -14,7 +14,7 @@ for (let item of saldo) {
 
 // Definimos saldo Inversiones inicial 0 y manipulamos DOM
 const initialValueInversiones = 0;
-if (localStorage.getItem('inversiones')===0 || NaN) {
+if (localStorage.getItem('inversiones')===null) {
     localStorage.setItem('inversiones', initialValueInversiones)
 }
 
